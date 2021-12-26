@@ -8,12 +8,16 @@
   "env": {
     "node": true
   },
-  "plugins": ["prettier"],
+  "plugins": [
+    "prettier"
+  ],
   "parserOptions": {
-    "ecmaVersion": 9,
+    "ecmaVersion": 12,
     "project": "./tsconfig.json"
   },
   "rules": {},
   "overrides": [],
-  "ignorePatterns": ["**/lib/*.js"]
+  "ignorePatterns": [
+    "**/lib/*.js"
+  ]
 }
