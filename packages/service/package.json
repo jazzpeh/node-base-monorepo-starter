@@ -5,19 +5,20 @@
 	"author": "Jazz Peh <jazzpehz@gmail.com>",
 	"homepage": "",
 	"license": "ISC",
-	"main": "lib/index.js",
+	"main": "dist/index.js",
 	"directories": {
-		"lib": "lib",
+		"lib": "dist",
 		"test": "__tests__"
 	},
 	"files": [
-		"lib"
+		"dist"
 	],
 	"scripts": {
 		"start": "nodemon --watch 'src/**/*.ts' --exec ts-node --files -r tsconfig-paths/register src/index.ts",
-		"build": "tsc -p tsconfig.json",
+		"build": "tsc",
 		"test": "jest",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"clean": "rimraf dist"
 	},
 	"dependencies": {
 		"@example/common": "^1.0.0",

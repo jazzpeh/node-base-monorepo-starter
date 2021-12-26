@@ -18,6 +18,6 @@
   "rules": {},
   "overrides": [],
   "ignorePatterns": [
-    "**/lib/*.js"
+    "**/dist/*.js"
   ]
 }

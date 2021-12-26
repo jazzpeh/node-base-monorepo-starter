@@ -1,15 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
-    "baseUrl": "./"
+    "outDir": "dist"
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules",
-    "lib/**/*",
+    "dist",
     "__tests__"
   ]
 }
