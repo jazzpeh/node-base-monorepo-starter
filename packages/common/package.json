@@ -1,0 +1,22 @@
+{
+	"name": "@example/common",
+	"version": "1.0.0",
+	"description": "Example of a common local dependency",
+	"author": "Jazz Peh <jazzpehz@gmail.com>",
+	"homepage": "",
+	"license": "ISC",
+	"main": "lib/index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "__tests__"
+	},
+	"files": [
+		"lib"
+	],
+	"scripts": {
+		"tsc": "tsc -p tsconfig.json",
+		"clean": "rimraf lib",
+		"build": "yarn clean && yarn tsc",
+		"test": "jest"
+	}
+}
