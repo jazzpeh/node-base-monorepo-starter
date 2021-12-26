@@ -10,13 +10,14 @@
 		]
 	},
 	"scripts": {
-		"setup": "yarn reset && rimraf node_modules && yarn install && yarn build && lerna bootstrap",
+		"setup": "yarn install && yarn build && lerna bootstrap",
 		"build": "lerna run build",
 		"bootstrap": "yarn build && lerna bootstrap",
 		"lint": "lerna run lint --parallel",
 		"start": "lerna run start --parallel",
 		"clean": "lerna run clean",
-		"reset": "yarn clean && lerna clean"
+		"clear": "yarn clean && lerna clean",
+		"reset": "yarn clear && rimraf node_modules && yarn install && yarn build && lerna bootstrap"
 	},
 	"devDependencies": {
 		"@types/jest": "^27.0.3",

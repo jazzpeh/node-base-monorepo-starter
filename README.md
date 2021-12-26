@@ -27,26 +27,35 @@ A simple and easy to use typescript monorepo configured for Node. This monorepo 
 
 ## <a name="adding-new-packages"></a> Adding new packages
 
-| Command                  | Description                             |
-| ------------------------ | --------------------------------------- |
-| `lerna create <package>` | Creates a new package under `/packages` |
+| Command                  | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `lerna create <package>` | Creates a new package under `/packages`. |
 
-## <a name ="running-packages"> Running packages
+---
+
+---
+
+## <a name ="running-packages"></a> Running packages
 
 | Command                             | Description                                                                       |
 | ----------------------------------- | --------------------------------------------------------------------------------- |
 | `lerna run start --scope=<package>` | Run the `start` command that is available in a specific package under `/packages` |
 
-## <a name="custom-script-commands"> Custom Scripts Command
+---
+
+---
+
+## <a name="custom-script-commands"></a> Custom Scripts Command
 
 These commands are added to `package.json` as a easy way to run certain combination of commands together.
 
 | Command         | Description                                                                                                                                           |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn setup`    | Useful when the monorepo already has dependencies installed and the intention is to reset and reinstall everything.                                   |
+| `yarn setup`    | Sets up the monorepo.                                                                                                                                 |
 | `yarn build`    | Runs all `build` command that is available in the packages, typically to compile typescripts.                                                         |
 | `yarn boostrap` | As the packages are supposed to be typesripts, this command runs `yarn tsc` first and then `lerna bootstrap` to bootstrap everything together nicely. |
 | `yarn lint`     | Runs all `lint` command that is available in the packages in parallel.                                                                                |
 | `yarn start`    | Runs all `start` comamnd that is available in the packages in parallel.                                                                               |
 | `yarn clean`    | Runs all `start` comamnd that is available in the packages.                                                                                           |
-| `yarn reset`    | Runs `yarn clean` and `lerna clean` to clean out the monorepo.                                                                                        |
+| `yarn clear`    | Runs `yarn clean` and `lerna clean` to clean out the monorepo.                                                                                        |
+| `yarn reset`    | Cleans and clear the monorepo and then reinstall, build and bootstrap all packages.                                                                   |
